@@ -36,7 +36,7 @@ function CadastroCategoria() {
 
     // vai demorar 4s para fazer algo na tela
     setTimeout(() => {
-      const URL ="http://localhost:8080/categorias/"
+      const URL =window.location.hostname.includes('localhost')?'http://localhost:8080/categorias':"https://cssflix.herokuapp.com/categorias"
       
   //     var myHeaders = new Headers();
 
