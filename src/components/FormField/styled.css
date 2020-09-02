@@ -1,0 +1,39 @@
+
+.input_field{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.button{
+    height: 50px;
+    display: block;
+    outline: none;
+    width: 50%;
+    cursor: text;
+    font-size: 1.5em;
+    
+    border-bottom: 2px;
+    border:0;
+}
+
+
+
+@keyframes textAnimation{
+    from{
+        font-size:initial;
+        }
+    to{
+        font-size: 12px;
+    }
+}
+
+
+.button:hover{ 
+        transition:all 3s ease-in;
+        animation: textAnimation 1s forwards ;
+}
+

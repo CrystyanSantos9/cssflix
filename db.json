@@ -1,0 +1,18 @@
+{
+  "categorias":[
+    {
+      "id":"1",
+    "nome":"Front End",
+    "descricao":"Uma categoria bacanudassa",
+    "cor":"#cbd1ff",
+    "link":"https://medium.com/reactbrasil/como-funciona-o-javascript-dentro-da-camada-de-rede-como-otimizar-seu-desempenho-e-seguran%C3%A7a-914b4d45106"
+},
+{
+  "id":"2",
+"nome":"Back End",
+"descricao":"Uma categoria bacanudassa",
+"cor":"#cbd1ff",
+"link":"https://medium.com/reactbrasil/como-funciona-o-javascript-dentro-da-camada-de-rede-como-otimizar-seu-desempenho-e-seguran%C3%A7a-914b4d45106"
+} 
+]
+}
