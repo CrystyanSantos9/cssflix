@@ -1,0 +1,6 @@
+cdnclaro-assinejanet.wooza.com.br-403
+cdn-dynatrace.wooza.com.br-403
+claro-teste-2.wooza.com.br-404
+cdn-posexpresstim.wooza.com.br-503
+controle.tim.com.br-404
+controleexpress50.tim.com.br-404

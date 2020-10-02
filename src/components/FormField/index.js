@@ -67,13 +67,15 @@ const Input = styled.input`
 `;
 
 function FormField({
-  label, name, type, value, onChange,
+  label, name, type, value, onChange, suggestions,
 }) {
   const fieldId = `id_${name}`;
   const isTextarea = type === 'textarea';
   const tag = isTextarea ? 'textarea' : 'input';
 
   const hasValue = Boolean(value.length);
+  // aparece sugestão se tiver sugestão
+  const hasSuggestions = Boolean(suggestions.length);
 
   // console.log(type);
 
@@ -91,11 +93,26 @@ function FormField({
           value={value}
           hasValue={hasValue}
           onChange={onChange}
+          list={hasSuggestions ?`SuggestionFor_${fieldId}`:undefined}
+          autoComplete={hasSuggestions ? 'off' : 'on'} //undefined porque o JSX reclama se por falso
         />
         <Label.Text>
           {label}
           :
         </Label.Text>
+        <datalist id={`SuggestionFor_${fieldId}`}>
+          hasSuggestions && (
+          {
+            /* nossos valors do datalist vem de suggestions */
+            suggestions.map((suggestion) => (
+              <option value={suggestion} key={`suggestionFO_${fieldId}_options${suggestion}`}>
+                {suggestion}
+              </option>
+            ))
+          })
+          
+
+        </datalist>
       </Label>
     </FormFieldWrapper>
   );
@@ -105,6 +122,7 @@ FormField.defaultProps = {
   type: 'text',
   value: '',
   onChange: () => { },
+  suggestions: [],
 };
 
 FormField.propTypes = {
@@ -113,6 +131,7 @@ FormField.propTypes = {
   name: propTypes.string.isRequired,
   value: propTypes.string,
   onChange: propTypes.func,
+  suggestions: propTypes.arrayOf(propTypes.string),
 };
 
 export default FormField;
